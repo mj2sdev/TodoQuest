@@ -1,7 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      TodoQuest
+      <ion-buttons class='ion-float-right' >
+        <ion-button (click)='presentModal()'>
+          <ion-icon name='add' size='large'></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,4 +19,25 @@
   </ion-header>
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-button expand='block'>
+    무랑털 폭파
+  </ion-button>
+  <ion-button (click)='presentAlert()' color='danger' expand='full'>
+    임재영 폭파
+  </ion-button>
+  <ion-card *ngFor='let c of counter'>
+    <ion-card-header>
+      <ion-card-subtitle>2020. 12. 23</ion-card-subtitle>
+      <ion-card-title>오늘의 목표</ion-card-title>
+      <ion-buttons class='ion-float-right'>
+        <ion-button>
+          <ion-icon name="checkmark-outline" size='large'></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-card-header>
+  
+    <ion-card-content>
+      오늘도 나는 외롭다. 하지만 나는  외롭다 그래서 나는 외롭다.
+    </ion-card-content>
+  </ion-card>
 </ion-content>
